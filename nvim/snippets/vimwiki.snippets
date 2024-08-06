@@ -1,511 +1,401 @@
-snippet inv
-		$1^{-1}$0
 
-snippet href
-		\footnote{\href{$1}{$2}.}$0
+# Context
+snippet impl
+		\Rightarrow
 
-snippet ssex
-		\subsubsection*{Exercises}
-		$0
+snippet iff
+		\Leftrightarrow
 
-snippet mmo
-		\memo{$1}$0
+snippet osbp
+		\mathscr{O}_$1($2)
 
-snippet abs
-		|$1|$0
+snippet osbo
+		\mathscr{O}_$1
 
-snippet gt
-		\ge$0
+snippet kxy
+		K[x, y]
 
-snippet lt
-		\le$0
+snippet afv
+		affine variet
 
-snippet cnv
-    \xrightarrow{\text{$1}}$0
+snippet kx
+		K[x_1, \ldots, x_n]
 
-snippet spp
-		\sup_{$1}$0
+snippet dfd
+		\dfrac{$1}{$2}
 
-snippet nff
-		\inf_{$1}$0
+snippet e2pi
+		e^{2\pi i $1}
 
-snippet lemm
-		\begin{lemma}[$1]
-		\end{lemma}$0
+snippet ses
+		0 \xrightarrow{}{} $1 \xrightarrow{}{} $2 \xrightarrow{}{} $3 \xrightarrow{}{} 0
 
-snippet exs
-		\begin{exercise}[$1]
-		\end{exercise}$0
+snippet xr
+		\xrightarrow{}{} $1
 
-snippet ns
-		\in$0
+snippet Ap
+		A_{\mathfrak{p}}
 
-snippet an
-		$1^{($2)}$0
+# General
+snippet mbf
+		\mathbf{$1}
 
-snippet axe
-		n\overline{AX_{\epsilon}}$0
+snippet twohead
+		\twoheadrightarrow $0
 
-snippet fund
-		\pi_1($1)$0
+snippet equiv
+		\equiv $1
 
-snippet ldots
-		\ldots$0
+snippet mscr
+		\mathscr{$1}
 
-snippet incl
-		\xhookrightarrow{}$0
+snippet msf
+		\mathsf{$1}
 
-snippet nabla
-		\nabla$0
+snippet mfr
+		\mathfrak{$1}
 
-snippet sumi
-		\sum_{$1}$0
+snippet varia
+		$1, \ldots, $1_$2
 
-snippet elp
-		\ell^{p}(\mathbb N)$0
+snippet xr
+		\xrightarrow{$1}{}
 
-snippet binom
-		\binom{$1}{$2}$0
+# Flashcards
+snippet clize
+		<g>$1</g>
+
+snippet mbo
+		\mathbf{$1}
+		
+snippet endfr
+		<!---->
+
+snippet fro
+		$1 <!---->
+		    - $0
+		
+snippet cloze
+		<g>$1</g>$2 <!---->
+
+# Modes
+snippet cases
+		\begin{cases}$1\end{cases}
+
+snippet mm
+		$$1$$0
+
+snippet dmm
+		$$
+		    $1
+		$$
+
+snippet mb
+		\mathbb{$1}
+
+snippet mc
+		\mathcal{$1}
+
+snippet mo
+		\text{$1}\ 
+
+snippet txt
+		\text{$1}
+
+snippet sp
+		$1^{$2}
+
+snippet sb
+		$1_{$2}
+
+snippet sba
+		$1_\alpha
+
+snippet def
+		**Def.** $0
+
+snippet defn
+		**Def. $1** $0
+
+snippet defs
+		**Def.** $0
+
+snippet algo
+		**Algo.** $0
+
+snippet ex
+		**Ex.** $0
+
+snippet rmk
+		**Rmk.** $0
+
+snippet nte
+		**Note.** $0
 
 snippet thm
-		\begin{theorem}[$1]
-		    $2
-		\end{theorem}
-		$0
-
-snippet nor
-		\norm{$1}$0
-
-snippet Dlt
-		\Delta$0
-
-snippet bm
-		\bm{$1}$0
-
-snippet dfrac
-		\dfrac{$1}{$2}$0
-
-snippet bul
-		@ \textbf{$1:}$0
-
-
-snippet prob
-    (${1:name}) : \begin{cases}
-                \text{minimise} & ${2:qty}, \\\
-                \text{subject to} & ${3:cond}.
-             \end{cases}$0
-
-
-snippet und
-		\underbrace{$1}_{$2}
-
-
-snippet vec
-		\vec{$1}
-
-snippet nor
-		\norm{$1}
-
-snippet todo
-		{\marginnote{\texttt{TODO}}}
-
-snippet dfs
-		\begin{definition}
-		  \leavevmode
-			\begin{itemize}
-				\item $1
-		  \end{itemize}
-		\end{definition}
-
-snippet subs
-		\subset
-
-snippet impl
-		\impl{$1}{$2}: $0
-
-snippet pfiff
-		\begin{proof}
-				\item $\Longrightarrow$: $1
-				\item $\Longleftarrow$: $2
-		\end{proof}
-
-		$0
+		**Thm.** $0
 
 snippet cor
-		\begin{corollary}[$1]
-		\end{corollary}
+		**Cor.** $0
 
-snippet Phi
-		\Phi
+snippet lemma
+		**Lemma.** $0
 
-snippet ell
-		\ell
+snippet prob
+		**Prob.** $0
 
-snippet lngl
-		\langle $1 \rangle
+snippet prop
+		**Prop.** $0
 
-snippet red
-		\textcolor{red}{$1} $0
+snippet qs
+		**Q.** $1?
 
-snippet decl
-		\DeclareMathOperator{$1}{$2}
-
-snippet sig
-		\sigma$0
-
-snippet vm
-		\leavevmode
-		$0
-
-snippet int
-		\int $1 \ d\\$2$0
-
-snippet inta
-		\int_{$1}^{$2} $3 \ d$4 $0
-
-snippet circ
-		\circ $0
-
-snippet xright
-		\xrightarrow{$1} $0
-
-snippet lright
-		\longrightarrow $0
-
-snippet tilde
-		\tilde{$1}$0
-
-snippet cdo
-		\cdot $0
-
-snippet eta
-		\eta
-
-snippet rho
-		\rho
-
-snippet varrho
-		\varrho
-
-snippet sig
-		\sigma
-
-snippet iota
-		\iota
-
-snippet nu
-		\nu
-
-snippet all
+# Greek letters
+snippet al
 		\alpha
 
-snippet bta
+snippet bt
 		\beta
 
-snippet gma
+snippet gm
 		\gamma
 
-snippet dlt
+snippet dl
 		\delta
 
-snippet omg
-		\omega
-
-snippet chi
-		\chi
-
-snippet opl
-		\oplus $0
-
-snippet oti
-		\otimes $0
-
-snippet ldo
-		\ldots
-
-snippet em
-		\emptyset
-
-snippet mu
-		\mu
+snippet Dl
+		\Delta
 
 snippet eps
 		\epsilon
 
-snippet psi
-		\psi
-
-snippet lam
-		\lambda
-
-snippet lsup
-		\varlimsup_{$1} $0
-
-snippet linf
-		\varliminf_{$1} $0
-
-snippet txx
-		\text{$1}$0
-
-snippet bar
-		\bar{$1}$0
-
-snippet ol
-		\overline{$1}
-
-snippet hat
-		\hat{$1}$0
-
-snippet tt
-		\mathcal T_{$1}$0
-
-snippet sub
-		$1_{$2}$0
-
-snippet sup
-		$1^{$2}$0
-
-snippet inft
-		\infty$0
-
-snippet bcu
-		\bigcup_{$1}
-
-snippet bca
-		\bigcap_{$1}
-
-snippet sec
-		\section{$1}$0
-
-snippet sm
-		\setminus $0
-
-snippet ssec
-		\subsection{$1}$0
-
-snippet sssec
-		\subsubsection*{$1}$0
-
-snippet let
-		$\\$1$$0
-
-snippet mb
-		\mathbb $0
-
-snippet mm
-		$$1$
-
-snippet inv
-		$1^{-1}$0
-
-snippet dm
-		\[
-		    $1
-		\]
-		$0
-
-snippet mc
-		\mathcal $0
-
-snippet def
-		\begin{definition}[$1]
-		\end{definition}
-		$0
-
-snippet nrm
-		\trianglelefteq
+snippet eta
+		\eta
 
 snippet phi
 		\phi
 
+snippet iota
+		\iota
+
+snippet lam
+		\lambda
+
+snippet Lam
+		\Lambda
+
+snippet mu
+		\mu
+
+snippet nu
+		\nu
+
+snippet omega
+		\omega
+
 snippet pi
 		\pi
 
-snippet ker
-		\ker
+snippet psi
+		\psi
 
-snippet stt
-		\\{$1\\}$0
+snippet rho
+		\rho
 
-# \begin{}...\end{}
-snippet begin
-	\begin{${1:env}}
-		${2}
-	\end{$1}
+snippet sigma
+		\sigma
 
-snippet begn
-	\begin{${1:env}}[${2}]
-		${3}
-	\end{$1}
+snippet theta
+		\theta
 
-snippet thm1
-	\begin{theorem}[${1}]
-	\end{theorem}
-	$0
+snippet tau
+		\tau
 
-snippet def1
-	\begin{definition}[${1}]
-	\end{definition}
-	$0
+snippet chi
+		\chi
 
-snippet prop1
-	\begin{proposition}[${1}]
-	\end{proposition}
-	$0
+snippet zeta
+		\zeta
 
-snippet tab
-	\begin{${1:tabular}}{${2:c}}
-	${3}
-	\end{$1}
+# Other symbols
+snippet notin
+		\notin $0
 
-snippet center
-	\begin{center}
-		${1}
-	\end{center}
+snippet setminus
+		\setminus $0
 
-snippet ali
-	\begin{align${1:ed}}
-		${2}
-	\end{align$1}
+snippet mid
+		\mid $0
 
-snippet eq
-	\begin{equation}
-		${1}
-	\end{equation}
+snippet times
+		\times $0
 
-snippet \
-	\[
-		${1}
-	\]
+snippet matr
+		\mathrm{Mat}_{$1}($2)
 
-snippet enum
-	\begin{enumerate}
-		\item ${1}
-	\end{enumerate}
+snippet corr
+		\leftrightarrow $0
 
-snippet itemize
-	\begin{itemize}
-		\item ${1}
-	\end{itemize}
+snippet cap
+		\cap $0
 
-snippet item
-	\item ${1}
+snippet cup
+		\cup $0
+
+snippet acts
+		\curvearrowright $0
+		
+snippet empty
+		\emptyset
 
 snippet mat
-	\begin{${1:p/b/v/V/B/small}matrix}
-		${2}
-	\end{$1matrix}
+		\begin{bmatrix}$1\end{bmatrix}
 
-snippet cas
-	\begin{cases}
-		${1:eq}, & ${2:cond}, \\\
-		${3:eq}, & ${4:cond}.
-	\end{cases}
-# Split
-snippet spl
-	\begin{split}
-		${1}
-	\end{split}
-# Part
-snippet part
-	\part{${1:part name}} % (fold)
-	\label{prt:${2:$1}}
-	${3}
-	% part $2 (end)
-# Chapter
-snippet cha
-	\chapter{${1:chapter name}}
-	\label{cha:${2:$1}}
-	${3}
-# Section
-snippet sec
-	\section{${1:section name}}
-	${3}
-# Section without number
-snippet sec*
-	\section*{${1:section name}}
-	${3}
-# Sub Section
-snippet sub
-	\subsection{${1:subsection name}}
-	${3}
-# Sub Section without number
-snippet sub*
-	\subsection*{${1:subsection name}}
-	${3}
+snippet perp
+		$1^{\perp}$0
 
-snippet it
-	\textit{${1:text}}
+snippet tsp
+		$1^{\intercal}$0
+		
+snippet vec
+		\vec{$1}$0
 
-snippet bf
-	\textbf{${1:text}}
+snippet bmat
+		\begin{bmatrix} $1 \end{bmatrix}
 
-snippet txt
-	\texttt{${1:text}}
+snippet clival
+		[$1]$0
 
-snippet fig
-	\begin{figure}[H]
-	\begin{center}
-	    \includegraphics[scale=${1}]{./Figures/${2}}
-	\end{center}
-	\caption{${3}}
-	\end{figure}
-	${5}
+snippet xho
+		\xhookrightarrow{} $0
 
-snippet tikz
-	\begin{figure}
-	\begin{center}
-	\begin{tikzpicture}[scale=${1:1}]
-		${2}
-	\end{tikzpicture}
-	\end{center}
-	\caption{${3}}
-	\label{fig:${4}}
-	\end{figure}
-	${5}
+snippet cong
+		\cong $0
+
+snippet znz
+		\mathbb{Z}/$1\mathbb{Z}$0
+		
+snippet sqrt
+		\sqrt{$1}
+
+snippet lfta
+		\Leftarrow
+
+snippet rgta
+		\Rightarrow
+
+snippet lra
+		\Leftrightarrow
+
+snippet subs
+		\subset $0
+
+snippet oplus
+		\oplus $0
+
+snippet bigoplus
+		\bigoplus_{$1} $0
+
+snippet otimes
+		\otimes $0
+
+snippet rm
+		\mathrm{$1}
+
+snippet cdot
+		\cdot $0
+
+snippet circ
+		\circ $0
+
+snippet inv
+		$1^{-1}$0
+
+snippet sup
+		\sup_{$1}
+
+snippet inf
+		\inf_{$1}
+
+snippet nabla
+		\nabla
+
+snippet norm
+		\|$1\|
+
+snippet abs
+		|$1|
 
 snippet frac
-	\frac{${1:num}}{${2:denom}} ${3}
+		\frac{$1}{$2}
+
+snippet int
+		\int $1 \ d$2
+
+snippet inta
+		\int_{$1}^{$2} $3 \ d$0
+
+snippet set
+		\\{$1\\}
+		
+snippet impl
+		\implies $0
+
+snippet ins
+		\in $0
+
+snippet infty
+		\infty
+
 snippet sum
-	\sum_{${1:i=1}}^{${2:N}} ${3}
+		\sum_{$1}
+
+snippet prod
+		\prod_{$1}
 
 snippet lim
-	\lim_{${1:x \to +\infty}} ${2}
+		\lim_{$1}
 
-snippet homework
-		\documentclass[12pt]{article}
-		\usepackage[margin=1in]{geometry} 
-		\usepackage{lastpage}
-		\usepackage{fancyhdr}
-		\pagestyle{fancy}
-		\setlength{\headheight}{40pt}
-		\setlength{\headsep}{7pt}
-		\usepackage{float}
-		\usepackage{graphicx}
-		\hfuzz=5.00pt
+snippet bcup
+		\bigcup_{$1}
 
-		\usepackage{amsthm}
-		\usepackage{amsmath}
-		\usepackage{amssymb}
-		\usepackage{bm}
-		\usepackage{enumerate}
-		\usepackage{extarrows}
-		\usepackage{mathtools}
+snippet bcap
+		\bigcap_{$1}
 
-		\theoremstyle{definition}
-		\newtheorem{lemma}{Lemma}
+snippet neq
+		\neq $1
 
-		\lhead{XXX} 
-		\rhead{Dahlgren}
-		\chead{\textsc{Homework XXX}}
-		\cfoot{\thepage}
+snippet ldots
+		\ldots
 
-		\begin{document}
-		\centering{Collaborators: TBA}
+snippet le
+		\le $0
 
-		\begin{enumerate}
-				\item 
-		\end{enumerate}
+snippet ge
+		\ge $0
 
-		\end{document}
+snippet hat
+		\hat{$1}
+
+snippet tilde
+		\tilde{$1}
+
+snippet bar
+		\bar{$1}
+
+snippet lngl
+		\langle $1\rangle
+
+snippet to
+		\to $0
+
+snippet mapsto
+		\mapsto $0
+
+snippet sim
+		\sim $0
+
+snippet pfiff
+    $\Rightarrow$: $1
+    - $\Leftarrow$: $2
 

@@ -67,6 +67,7 @@ return {
           -- Only choose to include Python and Markdown snippets, along with custom snippets
           require("luasnip.loaders.from_vscode").lazy_load({ include = { "python", "markdown" } })
           require("luasnip.loaders.from_snipmate").lazy_load { paths = { "~/.config/nvim/snippets" } }
+          require("luasnip").filetype_extend("vimwiki", {"markdown"})
         end,
       },
       opts = {
