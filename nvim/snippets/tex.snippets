@@ -1,7 +1,65 @@
 # TeX
+snippet Omega
+    \Omega
+
+snippet par
+    ($1)
+
+snippet RR
+    \mathbb{R}
+
+snippet CC
+    \mathbb{C}
+
+snippet prob
+    \P{$1}
+
+snippet PP
+    \P
+
+snippet weakconv
+    \rightharpoonup $1
+
+snippet expect
+    \expect{$1}
+
+snippet expectT
+    \expectT{$1}
+
+snippet lrabs
+    \left|$1\right|
+
+snippet QQ
+    \mathbb{Q}
+
+snippet Qp
+    \mathbb{Q}_p
+
+snippet bme
+    \mathbf{e}
+
+snippet kmodk2
+    k^*/(k^*)^2
+
+snippet substack
+    \substack{$1 \\ $2}
+
+snippet lrpar
+    \left($1\right)
+
+snippet xrv
+    \X{$1}
+
+snippet yrv
+    \Y{$1}
+
+snippet floor
+    \lfloor $1 \rfloor
 snippet cite
 		\cite{$1}
 
+snippet lrabs
+    \left|$1\right|
 snippet cila
 		\cite[$1]{$2}
 
@@ -99,7 +157,7 @@ snippet label
 		\label{$1}
 
 snippet cref
-		\cref{$1}
+		\Cref{$1}
 
 snippet uhom
 		1_{\Hom(C, A)}
@@ -306,8 +364,6 @@ snippet sqrt
 snippet lfta
 		\Leftarrow
 
-snippet rgta
-		\Rightarrow
 
 snippet lra
 		\Leftrightarrow
@@ -414,40 +470,23 @@ snippet to
 snippet mapsto
 		\mapsto $0
 
-snippet homework
-		\documentclass[12pt]{article}
-		\usepackage[margin=1in]{geometry} 
-		\usepackage{lastpage}
-		\usepackage{fancyhdr}
-		\pagestyle{fancy}
-		\setlength{\headheight}{40pt}
-		\setlength{\headsep}{7pt}
-		\usepackage{float}
-		\usepackage{graphicx}
-		\hfuzz=5.00pt
+snippet sect
+    \section{$1}
 
-		\usepackage{amsthm}
-		\usepackage{amsmath}
-		\usepackage{amssymb}
-		\usepackage{bm}
-		\usepackage{enumerate}
-		\usepackage{extarrows}
-		\usepackage{mathtools}
+snippet erdös
+    Erdős
 
-		\theoremstyle{definition}
-		\newtheorem{lemma}{Lemma}
+snippet rv
+    random variable
 
-		\lhead{XXX} 
-		\rhead{Dahlgren}
-		\chead{\textsc{Homework XXX}}
-		\cfoot{\thepage}
+snippet familN
+    ($1)_{N \ge 1}
 
-		\begin{document}
-		\centering{Collaborators: TBA}
+snippet familn
+    ($1)_{n \ge 1}
 
-		\begin{enumerate}
-				\item 
-		\end{enumerate}
+snippet Rgta
+    \Rightarrow $1
 
-		\end{document}
-
+snippet tbf
+    \textbf{$1}
