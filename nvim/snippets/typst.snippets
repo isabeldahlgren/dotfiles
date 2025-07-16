@@ -1,0 +1,69 @@
+snippet todo
+    #todo[$1]
+
+snippet emph
+    _$1_
+
+# Theorems
+snippet thmpf
+    #theorem(name: "$1")[]
+    #proof[
+        $2
+    ]
+
+snippet thmbox
+    #theorem(name: "$1")[
+        $2
+    ]
+
+snippet thmn
+    #theorem(name: "$1")[]
+    $2
+
+snippet propn
+    #proposition(name: "$1")[
+        $2
+    ]
+
+snippet exsn
+    #exercise(number: "$1")[
+        $2
+    ]
+
+snippet exst
+    #exercise(number: "$1")[#todo[To do.]]
+
+snippet mm
+    $$1$
+
+snippet runinenumi
+    #run-in-enum(separator: "; ", numbering-pattern: "(i)",
+      [$1],
+    )
+
+snippet runinenume
+    #run-in-enum(separator: none, numbering-pattern: "(a)",
+      [$1],
+    )
+
+snippet bracket
+    [$1]
+
+snippet header
+    #import "template.typ": *
+    #show: ams-article.with(
+      title: [Title],
+      authors: (
+        (
+          name: "Isabel Dahlgren",
+          department: [Department of Mathematics],
+          organization: [ETH Zürich],
+          location: [Zürich, Switzerland],
+          email: "idahlgren@student.ethz.ch",
+          url: "https://isabeldahlgren.github.io/"
+        ),
+      ),
+      abstract: lorem(100),
+      bibliography: bibliography("references.bib"),
+    )
+

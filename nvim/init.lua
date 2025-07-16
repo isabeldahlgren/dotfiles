@@ -83,7 +83,6 @@ I hope you enjoy your Neovim journey,
 
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
-vim.opt.conceallevel=2
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -91,6 +90,13 @@ vim.opt.conceallevel=2
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- My edits
+vim.opt.conceallevel = 2
+vim.o.tabstop = 4
+vim.o.expandtab = true
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.cmdheight = 0
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 
@@ -247,54 +253,6 @@ rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- My plugins
-  {
-    'pocco81/auto-save.nvim',
-  },
-  {
-    'ryleelyman/latex.nvim',
-    config = function()
-      require('latex').setup {
-        conceals = {
-          enabled = {
-            'greek',
-            'math',
-            'script',
-            'delim',
-            'font',
-          },
-          add = {
-            ['mathrm'] = '',
-            ['sqrt'] = '√',
-          },
-        },
-        imaps = {
-          enabled = true,
-          add = {},
-          default_leader = '`',
-        },
-      }
-    end,
-  },
-  {
-    'toppair/peek.nvim',
-    event = { 'VeryLazy' },
-    build = 'deno task --quiet build:fast',
-    config = function()
-      require('peek').setup()
-      vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
-      vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
-    end,
-  },
-  -- Typst plugin
-  {
-    'chomosuke/typst-preview.nvim',
-    lazy = false, -- or ft = 'typst'
-    version = '0.3.*',
-    build = function()
-      require('typst-preview').update()
-    end,
-  },
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
@@ -886,7 +844,7 @@ require('lazy').setup({
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
         -- preset = 'default',
-        preset = 'super-tab',
+        preset = 'enter',
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -932,7 +890,7 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    
+
     -- 'folke/tokyonight.nvim',
     -- priority = 1000, -- Make sure to load this before all the other start plugins.
     -- config = function()
@@ -948,13 +906,13 @@ require('lazy').setup({
     --   -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
     --   vim.cmd.colorscheme 'tokyonight-night'
     -- end,
-    
+    -- Add custom colour theme
     'neanias/everforest-nvim',
     priority = 1000,
     config = function()
       require('everforest').setup {
         vim.cmd.colorscheme 'everforest',
-    }
+      }
     end,
   },
 
@@ -1036,15 +994,15 @@ require('lazy').setup({
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
@@ -1054,6 +1012,7 @@ require('lazy').setup({
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
+    --[[
     icons = vim.g.have_nerd_font and {} or {
       cmd = '⌘',
       config = '🛠',
@@ -1069,6 +1028,8 @@ require('lazy').setup({
       task = '📌',
       lazy = '💤 ',
     },
+    --]]
+    icons = {},
   },
 })
 
